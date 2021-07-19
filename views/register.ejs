@@ -27,13 +27,7 @@
       <p class="font-bold text-lg">Register</p>
     </div>
     <div class="px-3 pb-5">
-      <div class="flex justify-center text-red-400 text-sm">
-        <% if(locals.errors != 'undefined') {%>
-        <p><%= errors.passwordMismatch %></p>
-        <p><%= errors.passwordLength %></p>
-
-        <% } %>
-      </div>
+      <div class="mb-2"><%- include("./partials/messages") %></div>
       <form
         action="/users/register"
         method="POST"
